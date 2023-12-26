@@ -1,0 +1,54 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "toc_visible": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "WWu7FGxaxwbO",
+        "outputId": "5354dca5-7e39-45c4-84cf-91f2fc46caa9",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter an emoji: ☺️🍫✊😞😇\n",
+            "Original Emoji: ☺️🍫✊😞😇\n",
+            "Converted Text: :smiling_face::chocolate_bar::raised_fist::disappointed_face::smiling_face_with_halo:\n"
+          ]
+        }
+      ],
+      "source": [
+        "import emoji\n",
+        "def convert_emoji_to_text(emoji_text):\n",
+        "    text_with_aliases = emoji.demojize(emoji_text)\n",
+        "    return text_with_aliases\n",
+        "def main():\n",
+        "    emoji_input = input(\"Enter an emoji: \")\n",
+        "    converted_text = convert_emoji_to_text(emoji_input)\n",
+        "    print(\"Original Emoji:\", emoji_input)\n",
+        "    print(\"Converted Text:\", converted_text)\n",
+        "if __name__ == \"__main__\":\n",
+        "    main()"
+      ]
+    }
+  ]
+}
